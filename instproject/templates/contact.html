@@ -1,0 +1,69 @@
+{% extends 'basehome.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>contact page</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+{% block content %}
+    <style>
+    body{
+        background-image: url("{% static 'imajes/pic3.jpg' %}");
+        background-size: cover;
+    }
+    ul{
+        margin-top: 5px;
+        list-style-type: none;
+        background-color: white;
+        padding: 0;
+        overflow: hidden;
+        color: black;
+
+
+
+    }
+    .li{
+        list-style-type: lower-greek;
+        {#margin-top: -7px;#}
+        {#background-color: blanchedalmond;#}
+        color: black;
+        float: unset;
+
+
+
+
+    }
+    body{
+        background-color: white;
+        color: deepskyblue;
+
+    }
+
+    </style>
+
+    <div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+
+
+            <form method="post">
+                {% csrf_token %}
+                {{ cform }}<br>
+                <center>
+                <input type="submit" value="submit" class ="btn btn-success">
+                <input type="reset" value="clear" class="btn btn-danger"></center>
+            </form>
+
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
+</body>
+</html>

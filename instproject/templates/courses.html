@@ -1,0 +1,71 @@
+{% extends 'basehome.html' %}
+<html>
+<head>
+    <title>Courses page</title>
+</head>
+<body>
+{% block content %}
+    <style>
+    table{
+        width: 100%;
+        text-align: center;
+    }
+    td,th{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    tbody:nth-of-type(odd){
+        background-color: gainsboro;
+    }
+    tbody:nth-of-type(even){
+        background-color: gray;
+        color: white;
+    }
+    thead{
+        background-color: bisque;
+    }
+    body{
+        background-color: #bdc3c7;
+    }
+    </style>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {% if course %}
+                <h3>Avalible Courses Are</h3>
+                <table border="2">
+                <thead>
+                <tr>
+                    <th>Course_id</th>
+                    <th>Course_Name</th>
+                    <th>Course_Duration (Days)</th>
+                    <th>Course_Fee</th>
+                    <th>Start_Date</th>
+                    <th>Start_Time</th>
+                    <th>Trainer_Name</th>
+                    <th>Trainer_Exp</th>
+                </tr>
+                </thead>
+                {% for x in course %}
+                    <tbody>
+                    <tr>
+                        <td>{{ x.course_id }}</td>
+                        <td>{{ x.course_name }}</td>
+                        <td>{{ x.course_dur }}</td>
+                        <td>{{ x.course_fee }}</td>
+                        <td>{{ x.start_date}}</td>
+                        <td>{{ x.start_time}}</td>
+                        <td>{{ x.trainer_name}}</td>
+                        <td>{{ x.trainer_exp}}</td>
+                    </tr>
+                    </tbody>
+                {% endfor %}
+                </table>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
+</body>
+</html>

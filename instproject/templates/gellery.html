@@ -1,0 +1,84 @@
+{% extends 'basehome.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>gellery  Page</title>
+</head>
+<body>
+{% block content %}
+    <script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+{#<div class="container">#}
+{#<div class="row">#}
+{#    <div class="col-md-6">#}
+{#        <img src="{% static 'imajes/pic7.jpg' %}"style="width: 100%; height: 50%">#}
+{#    </div>#}
+{#    <div class="col-md-6">#}
+{#        <img src="{% static 'imajes/pic2.jpg' %}"style="width: 100%; height: 50%">#}
+{#    </div>#}
+{#</div><br>#}
+{#<div class="row">#}
+{#    <div class="col-md-6">#}
+{#        <img src="{% static 'imajes/pic3.jpg' %}"style="width: 100%; height: 50%">#}
+{#    </div>#}
+{#    <div class="col-md-6">#}
+{#        <img src="{% static 'imajes/pic4.jpg' %}"style="width: 100%; height: 50%">#}
+{#    </div>#}
+{#</div><br>#}
+{#<div class="row">#}
+{#    <div class="col-md-6">#}
+{#        <img src="{% static 'imajes/pic5.jpg' %}"style="width: 100%; height: 50%">#}
+{#    </div>#}
+{#    <div class="col-md-6">#}
+{#        <img src="{% static 'imajes/pic6.jpg' %}"style="width: 100%; height: 50%">#}
+{#    </div>#}
+{#</div><br>#}
+{#<div class="row">#}
+{#    <div class="col-md-6">#}
+{#        <img src="{% static 'imajes/pic1.jpg' %}"style="width: 100%; height: 50%">#}
+{#    </div>#}
+{#    <div class="col-md-6">#}
+{#        <img src="{% static 'imajes/piic8.jpg' %}"style="width: 100%; height: 50%">#}
+{#    </div>#}
+{#</div>#}
+{#</div>#}
+    <style>
+    body{
+        background-color: #bdc3c7;
+    }
+       .container img{
+        filter: grayscale(100%);
+           transition:1.3s;
+       }
+    .container img:hover{
+        filter: grayscale(0);
+        transform:scale(1.1);
+    }
+
+    </style>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4" >
+
+            <a href="{% static 'imajes/pic3.jpg' %}" data-lightbox="container">
+                <img src="{% static 'imajes/pic4.jpg' %}" style="width: 100%; height: 50%">
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{% static 'imajes/pic4.jpg' %}" data-lightbox="container">
+                <img src="{% static 'imajes/pic4.jpg' %}" style="width: 100%; height: 50%">
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{% static 'imajes/pic9.jpg' %}" data-lightbox="container">
+                <a href="{% static 'imajes/pic6.jpg' %}" data-lightbox="container">
+                <img src="{% static 'imajes/pic4.jpg' %}"style="width: 100%; height: 50%">
+            </a>
+            </a>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
+</body>
+</html>

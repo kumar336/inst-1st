@@ -1,0 +1,51 @@
+{% extends 'basehome.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>Team Page</title>
+    <link rel="stylesheet" href="{% static 'css/team.css' %}">
+
+
+</head>
+<body>
+{% block content %}
+    <style>
+    .body{
+        background-color: #bdc3c7;
+        padding-bottom: -40px;
+    }
+
+
+    </style>
+<div class="team">
+
+<span class="spl"></span>
+<h1 >Our Team</h1>
+<div class="pics">
+    <a href="#p1"><img src="{% static 'imajes/pic7.jpg' %}"></a>
+    <a href="#p2"><img src="{% static 'imajes/pic5.jpg' %}"></a>
+    <a href="#p3"><img src="{% static 'imajes/pic7.jpg' %}"></a>
+</div>
+<div class="section" id="p1">
+    <h1 class="name">Bad boy</h1>
+    <span class="sp1"></span>
+    <center><p>Python Dummy Pro.............................</p></center>
+</div>
+<div class="section" id="p3">
+    <h1 class="name">Bad boy 2</h1>
+    <span class="sp1"></span>
+    <center><p>Python Dummy Pro.............................</p></center>
+</div>
+
+<div class="section" id="p2">
+    <h1 class="name">Rajesh Mannava</h1>
+    <span class="sp1"></span>
+    <center><p>Most dangerous than Woulf</p></center>
+</div>
+
+</div>
+
+
+{% endblock %}
+</body>
+</html>

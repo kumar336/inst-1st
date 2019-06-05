@@ -1,0 +1,105 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>Base Home</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/team.css' %}">
+    <script type="text/javascript src="{% static 'js/lightbox-plus-jquery.min.js' %}></script>
+<style>
+    #name1{
+        font-size: 30px;
+        color: red;
+        font-family: cursive;
+        text-shadow: 2px 2px blue;
+    }
+
+    body{
+        background-color: #bdc3c7;
+    }
+
+    #ull{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+        color: white;
+    }
+    {#li {#}
+    {#    list-style-type: none;#}
+    {#    display: block;#}
+    {#    margin: 0;#}
+    {#    padding: 0;#}
+    {#    overflow: hidden;#}
+    {#    width: 16.666667%;#}
+    {#    background-color: lightskyblue;#}
+    {#}#}
+    li {
+        float: left;
+    }
+    li a{
+        display: block;
+        text-align: center;
+        padding: 15px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        background-color: black;
+        color: white;
+    }
+    .active{
+        background-color: green;
+    }
+    li a:hover{
+        background-color: dodgerblue;
+        text-decoration: none;
+        color: white;
+
+    }
+    .footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+        padding: 60px 10px 10px 10px;
+    }
+    #h11{
+        font-size: 40px;
+        text-shadow: 3px 2px 2px red;
+
+    }
+
+
+
+</style>
+<body>
+<u1 id="ull">
+    <li ><a class="active" href="/home/"  >Home</a></li>
+    <li ><a href="/contact/">contact</a></li >
+    <li ><a href="/courses/">Courses</a></li >
+    <li><a href="/feedback/">Feedback</a></li>
+    <li><a href="/team/">Team</a></li>
+    <li><a href="/gellery/">Gellery</a></li>
+</u1>
+
+<center><h1 align="center" id="h11">Welcome to Durgasoft</h1></center>
+
+{% block content %}
+{% endblock %}
+
+<foter  class="footer">
+    <h4>@Durgasoft.blog.in</h4>
+</foter>
+</body>
+</html>
